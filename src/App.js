@@ -1,5 +1,10 @@
 import React from 'react';
-import HomePage from "./pages/HomePage";
+import "./styles/app.styles.scss";
+
+//pages
+import HomePage from "./pages/home-page/HomePage";
+//components
+
 
 
 function App() {
