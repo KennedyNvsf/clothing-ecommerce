@@ -6,13 +6,14 @@ import "./styles/app.styles.scss";
 import HomePage from "./pages/home-page/HomePage";
 import ShopPage from "./pages/shop-page/ShopPage"
 //components
-
+import Header from "./components/header/Header.component";
 
 
 
 function App() {
   return (
     <div className="app">
+      <Header/>
       <Switch>
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/shop" component={ShopPage}/>
