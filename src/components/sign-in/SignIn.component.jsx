@@ -40,8 +40,8 @@ const SignIn = () => {
                 <FormInput  onChange={({target}) => setPassword(target.value)} name="password" label="Password" value={password} type="password" required />
                
                 <div className="buttons">
-                    <CustomBtn type="submit" value="Submit Form"> Sign in </CustomBtn>
-                    <CustomBtn onClick={signInWithGoogle} value="Submit Form" isGoogleSignIn>  Sign in with Google</CustomBtn>
+                    <CustomBtn type="submit" value="Submit Form"> SIGN IN </CustomBtn>
+                    <CustomBtn onClick={signInWithGoogle} value="Submit Form" isGoogleSignIn>  SIGN IN WITH GOOGLE</CustomBtn>
                 </div>
                
             </form>
