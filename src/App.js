@@ -6,11 +6,15 @@ import {auth, createUserProfileDocument} from "./firebase/firebase.utils";
 //redux
 import {connect} from "react-redux";
 import {setCurrentUser} from "./redux/user/user.actions";
+import {createStructuredSelector} from "reselect";
+import {selectCurrentUser} from "./redux/user/user.selector";
+import {selectCartHidden} from "./redux/cart/cart.selectors";
 
 //pages
 import HomePage from "./pages/home-page/HomePage";
 import ShopPage from "./pages/shop-page/ShopPage";
 import SignPage from "./pages/sign-page/SignPage";
+import CheckoutPage from './pages/checkout-page/CheckoutPage';
 //components
 import Header from "./components/header/Header.component";
 
@@ -59,6 +63,7 @@ class App extends React.Component {
               )
             }
           />
+          <Route exact path='/checkout' component={CheckoutPage} />
         </Switch>
       </div>
     );
@@ -66,8 +71,8 @@ class App extends React.Component {
 }
 
 
-const mapStateToProps = ({user}) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 })
 
 const mapDispatchToProps = dispatch => ({
